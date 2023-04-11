@@ -1,0 +1,30 @@
+{
+  "name": "kas-support",
+  "displayName": "Kas Support",
+  "description": "",
+  "icon": "images/icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "kas",
+      "aliases": ["Kas", "kas"],
+      "extensions": [".kas"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "kas",
+      "scopeName": "source.kas",
+      "path": "./syntaxes/kas.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

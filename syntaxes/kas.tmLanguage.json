@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Kas",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.import.include.kas",
+          "match": "\\%\\b(include)\\b"
+        },
+        {
+          "name": "keyword.control.import.includebinary.kas",
+          "match": "\\%\\b(incbin)\\b"
+        },
+        {
+          "name": "keyword.control.macro.define.kas",
+          "match": "\\%\\b(define)\\b"
+        },
+        {
+          "name": "keyword.control.macro.undefine.kas",
+          "match": "\\%\\b(undefine)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.label.kas",
+          "match": ".*:"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.kas",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.kas",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.kas",
+          "match": ";.*"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.kas"
+}
